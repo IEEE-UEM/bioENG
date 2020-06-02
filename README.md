@@ -2,19 +2,19 @@
 Instalar a versão LTS do node - 12.17.0
 Abrir o CMD, prompt de comando.
  - node -v
- e
+ - e
  - npm -v
 
 # Yarn
 Abrir o CMD, prompt de comando.
  - npm install -g yarn
- e
+ - e
  - yarn -v
 
 # Expo
 O react-native esta intrinseco ao expo.
  - npm install expo-cli --global
-  ou
+ - ou
  - yarn global add expo-cli
 
 Baixar o aplicativo da PlayStore - ExpoClient
