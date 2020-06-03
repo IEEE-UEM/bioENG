@@ -5,3 +5,11 @@
 - git push origin master
 
 - git pull origin master
+
+# Expo
+
+- expo init appscan3D
+- cd appscan3D
+- yarn install
+- yarn start ou expo start
+- yarn add expo-camera
