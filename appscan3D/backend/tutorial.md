@@ -23,7 +23,7 @@ python
 import stl
 
 - OpenCV:
-Digite o comando: py -2.7 -m pip instll opencv-python (ou py -3.8 -m pip instll opencv-python para python3.8)
+Digite o comando: py -2.7 -m pip install opencv-python (ou py -3.8 -m pip install opencv-python para python3.8)
 Para testar, abra o terminal e digite os comandos: 
 python
 import cv2
