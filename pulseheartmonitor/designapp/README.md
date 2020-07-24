@@ -1,4 +1,4 @@
-#Design do App
+# Design do App
 
 Nessa pasta serão inseridos possíveis layouts das páginas do aplicativo, com as respectivas bibliotecas que iremos utilizar.
 
