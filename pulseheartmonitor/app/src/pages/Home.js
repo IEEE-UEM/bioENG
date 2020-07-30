@@ -1,57 +1,83 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {
+  ImageBackground,
+  StyleSheet,
+  Image,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 
 export default function Home({ navigation }) {
 
-  function tirarFoto() {
-    // Acessar a camera do individuo
-    console.log('brandao')
-    navigation.navigate('Foto')
+  function pressHandler() {
+    navigation.navigate('Inserir perfil')
+    console.log('Inserir perfil apertado!')
+    
   }
 
-  function escolherImagem() {
-    // Acessar a galeria do individuo
-    console.log('rodolfo')
+  function pressHandler2() {
+    navigation.navigate('Info')
+    console.log('Dados apertado!')
+  }
+
+  function pressHandler3() {
+    console.log('Sobre o aplicativo apertado!')
   }
 
   return (
-    <View style={styles.container}>
-      <View>
-        <Text>Projeto Pulse Sensor</Text>
-      </View>
-
-      <View>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={tirarFoto}
-        >
-          <Text>Tirar Foto</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={escolherImagem}
-        >
-          <Text>Escolher imagem na galeria</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    <ImageBackground style={styles.background}>
+      <Image style={styles.logo} source={require('../../assets/logoapp.jpeg')} />
+      <TouchableOpacity onPress={pressHandler}>
+        <View style={styles.buttonRegister}>
+          <Text style={styles.buttonText}>Inserir Perfil</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={pressHandler2}>
+        <View style={styles.buttonEnter}>
+          <Text style={styles.buttonText}>Dados</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={pressHandler3}>
+        <View style={styles.buttonSobre}>
+          <Text style={styles.buttonText}>Sobre o Aplicativo</Text>
+        </View>
+      </TouchableOpacity>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
+    backgroundColor: '#332e44',
     flex: 1,
-    backgroundColor: '#fff',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  tinyLogo: {
-    width: 50,
-    height: 50,
+  buttonRegister:{
+    width: 400,
+    alignItems: 'center',
+    backgroundColor: '#6959CD',
   },
-  button: {
-    alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10
+  buttonEnter: {
+    width: 400,
+    alignItems: 'center',
+    backgroundColor: '#7A67EE',
+  },
+  buttonText: {
+    textAlign: 'center',
+    padding: 20,
+    color: 'white',
+  },
+  logo: {
+    width: 200,
+    height: 200,
+    position: 'absolute',
+    top: 50,
+  },
+  buttonSobre: {
+    width: 400,
+    alignItems: 'center',
+    backgroundColor: '#836FFF',
   },
 });
