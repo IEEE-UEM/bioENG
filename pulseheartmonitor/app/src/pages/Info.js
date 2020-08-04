@@ -18,7 +18,7 @@ export default function Info({ navigation }) {
     const data = {
       labels: ['1', '2', '3', '4', '5', '6','7','8','9','10','11','12'],
       datasets: [{
-        data: [ 20, 45, 28, 80, 99, 43, 60, 45, 65, 60, 100,78 ]
+        data: [ 20, 45, 28, 80, 99, 43, 0, 45, 65, 100, 100,78 ]
       }]
     }
 
@@ -73,7 +73,7 @@ export default function Info({ navigation }) {
 
   const styles = StyleSheet.create({
     background: {
-      backgroundColor: '#332e44',
+      backgroundColor: '#fff',
       flex: 1,
       justifyContent: 'flex-end',
       alignItems: 'center',

@@ -8,22 +8,21 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export default function Home({ navigation }) {
+function Inicio(props) {
 
-  function pressHandler() {
-    navigation.navigate('Inserir perfil')
-    console.log('Inserir perfil apertado!')
-    
-  }
+  const pressHandler = () => {
+    props.navigation.navigate('Perfil');
+  };
 
-  function pressHandler2() {
-    navigation.navigate('Info')
-    console.log('Dados apertado!')
-  }
+  const pressHandler2 = () => {
+    props.navigation.navigate('Dados');
+  };
 
-  function pressHandler3() {
-    console.log('Sobre o aplicativo apertado!')
-  }
+  const pressHandler3 = () => {
+    //props.navigation.navigate('Sobre');
+    console.log('Apertou o Sobre');
+  };
+
 
   return (
     <ImageBackground style={styles.background}>
@@ -81,3 +80,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#836FFF',
   },
 });
+
+export default Inicio;
