@@ -1,12 +1,12 @@
 #include "SoftwareSerial.h"
 #include<Wire.h>
-
+#include <PulseSensorPlayground.h>
 
 int Threshold = 530;            // Determine which Signal to "count as a beat", and which to ingore.
-int PulseSensorPurplePin = 0;        // Pulse Sensor PURPLE WIRE connected to ANALOG PIN 0
 int AcX,GyX; // Confimar qual coordenada varia com o movimento de pendulo do braço
 //endereco I2C do MPU6050
 const int MPU=0x68;
+const int PulseWire = 0;
 
 SoftwareSerial bluetooth(2, 3); //TX, RX (Bluetooth)
 
